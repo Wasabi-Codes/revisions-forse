@@ -1,5 +1,5 @@
 /* Révisions FORSE : réseau d'abord (toujours la dernière version), copie locale si hors ligne */
-const CACHE="forse-v2";
+const CACHE="forse-v2.01";
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(["./","./manifest.webmanifest","./icon-192.png","./icon-512.png"])))});
 self.addEventListener("activate",e=>e.waitUntil(self.clients.claim()));
 self.addEventListener("fetch",e=>{
